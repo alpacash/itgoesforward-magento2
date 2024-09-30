@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\CatalogInventory\Observer\SubtractQuoteInventoryObserver">
+        <plugin name="alpaca_it_goes_forward_skip_stock_deduction"
+                type="Alpaca\ItGoesForward\Plugin\StockDeductionPlugin"/>
+    </type>
+    <preference for="Alpaca\ItGoesForward\Api\ListingsApiInterface" type="Alpaca\ItGoesForward\Model\ListingsApi"/>
+    <preference for="Alpaca\ItGoesForward\Api\OrderByIncrementIdInterface" type="Alpaca\ItGoesForward\Model\OrderByIncrementId"/>
+</config>
